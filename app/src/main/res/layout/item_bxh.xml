@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/countid"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/songnameid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toi muon quen Em"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/countid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tencasiid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phan Manh Quynh"
+        app:layout_constraintTop_toBottomOf="@id/songnameid"
+        app:layout_constraintStart_toStartOf="@id/songnameid" />
+
+
+    <ImageButton
+        android:id="@+id/btndownloadmusic"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:text="Down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_compare_arrows_black_24dp" />
+
+    <TextView
+        android:id="@+id/qualitydetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lossless"
+        android:textSize="11sp"
+        android:textColor="#ff3c42"
+        app:layout_constraintEnd_toStartOf="@id/btndownloadmusic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/countdownloadid"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/songnamedownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toi muon quen Em"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/countdownloadid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/artistdownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phan Manh Quynh"
+        app:layout_constraintStart_toStartOf="@id/songnamedownload"
+        app:layout_constraintTop_toBottomOf="@id/songnamedownload" />
+
+    <TextView
+        android:id="@+id/downloadlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chất lượng"
+        app:layout_constraintStart_toStartOf="@+id/artistdownload"
+        app:layout_constraintTop_toBottomOf="@+id/artistdownload" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/downloadlabel"
+        app:layout_constraintTop_toBottomOf="@id/artistdownload">
+
+        <ImageView
+
+            android:id="@+id/download128"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/i128kps" />
+        <ImageView
+            android:id="@+id/download320"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/i300kbps"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/download500"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/i500kbps"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/downloadLossless"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/losslesskbps"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

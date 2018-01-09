@@ -1,0 +1,322 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.xon.aemusic.View.Online">
+
+    <RelativeLayout
+        android:id="@+id/linear"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpagerBannerId"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/cirbanner"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:ci_gravity="right"
+                app:ci_height="7dp"
+                app:ci_orientation="horizontal"
+                app:ci_width="7dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewpagerBannerId" />
+
+            <TextView
+                android:id="@+id/playlistlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playlist"
+                app:layout_constraintTop_toBottomOf="@+id/viewpagerBannerId"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/playlistview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="#00ffffff"
+                android:padding="8dp"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/playlistlabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_receipt_black_30dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#3caaf9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/playlistlabel" />
+
+            <ImageButton
+                android:id="@+id/onsong1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="fill"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/onsong2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/playlistlabel" />
+
+            <TextView
+                android:id="@+id/onsongtext1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="10sp"
+                android:text="Day la cai vi du"
+                app:layout_constraintStart_toStartOf="@+id/onsong1"
+                app:layout_constraintTop_toBottomOf="@+id/onsong1" />
+
+            <TextView
+                android:id="@+id/onsongtext2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Day la cai vi du"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/onsong2"
+                app:layout_constraintTop_toBottomOf="@+id/onsong2" />
+
+            <ImageButton
+                android:id="@+id/onsong2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="fill"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/onsong1"
+                app:layout_constraintTop_toTopOf="@+id/onsong1" />
+
+            <ImageButton
+                android:id="@+id/onsong3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="fill"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/onsong4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/onsongtext1" />
+
+            <TextView
+                android:id="@+id/onsongtext3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Day la cai vi du"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/onsong3"
+                app:layout_constraintTop_toBottomOf="@+id/onsong3" />
+
+            <ImageButton
+                android:id="@+id/onsong4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="fill"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/onsong3"
+                app:layout_constraintStart_toEndOf="@+id/onsong3"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+            <TextView
+                android:id="@+id/onsongtext4"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Day la cai vi du"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/onsong4"
+                app:layout_constraintTop_toTopOf="@+id/onsongtext3" />
+
+
+            <TextView
+                android:id="@+id/labelbxh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="BXH Zing"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/onsongtext4" />
+
+            <ImageButton
+                android:id="@+id/bxhvietnam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="#00ffffff"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/labelbxh"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_receipt_black_30dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#3caaf9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelbxh" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/bangxephang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@+id/labelbxh" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#f59a98"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bangxephang" />
+
+            <Button
+                android:id="@+id/bxhaumy"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="BXh ÂU MỸ"
+                android:background="#00ffffff"
+                app:layout_constraintEnd_toStartOf="@id/bxhhanquoc"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bangxephang" />
+
+            <Button
+                android:id="@+id/bxhhanquoc"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/bxhaumy"
+                android:background="#00ffffff"
+                android:text="BXh HÀN QUỐC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/bxhaumy"
+                app:layout_constraintTop_toTopOf="@id/bxhaumy" />
+
+            <Button
+                android:id="@+id/realtime"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bxhaumy"
+                android:background="#00ffffff"
+                android:text="Real Time"
+                app:layout_constraintEnd_toStartOf="@id/top100"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bxhaumy" />
+
+            <Button
+                android:id="@+id/top100"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bxhhanquoc"
+                android:layout_toRightOf="@+id/realtime"
+                android:background="#00ffffff"
+                android:text="TOP 100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/realtime"
+                app:layout_constraintTop_toTopOf="@id/realtime" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#9af7bb"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top100" />
+
+
+            <TextView
+                android:id="@+id/labelchude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:text="CHỦ ĐỀ VÀ THỂ LOẠI"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/realtime" />
+
+            <ImageButton
+                android:id="@+id/chudevatheloai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00ffffff"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/labelchude"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_receipt_black_30dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#3caaf9"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelchude" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
